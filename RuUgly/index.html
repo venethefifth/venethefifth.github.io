@@ -12,18 +12,41 @@
     }
   </style>
   </head>
-  <body>
-  <h1><center>Are you ugly?</center></h1>
-  <h4><center>Ever since the invention of the mirror, many have wondered about their physical attraction. <br>
-  In the age of the internet, we turn to computers for answers. So why not put your self-worth on the line <br>
-  and ask once and for all, are you ugly?</center></h4>
   
-  <script language=Javascript>
-      <!--
+  <body onload="script();">
+  <h1><center>Are you ugly?</center></h1>
+  <h6><center>Ever since the invention of the mirror, <br>
+  many have wondered about their physical attraction. <br>
+  In the age of the internet, we turn to computers for answers. <br>
+  So why not put your self-worth on the line <br>
+  and ask once and for all, are you ugly?</center></h6>
+  
+  <h6><center>Upload your image</center></h6>
+  
+  <center><input type="file" accept="image/*;capture=camera"></center>
+    <center><button onclick="myFunction ()">Finish</button></center>
+    <script>
+      function myFunction() {
+        var image = prompt ("From a scale of 1-10, you are a");
+        if (image != null) {
+          document.getElementById("demo").innerHTML = "Nice picture!"
+        }
+        
+        
+      }
+    </script>
+  
+
+ <script language=Javascript>
+
+ var myFunction=function() { 
       var rand_no = Math.floor((10 - 1)*Math.random()) ;
       alert(rand_no);
-      -->
-    </script>
+ };
+      
+  </script>
+  
+  
   </body>
   
 </html>
