@@ -1,0 +1,50 @@
+function randomizepictures() {
+var image ['https://cbsminnesota.files.wordpress.com/2013/07/b_atlanta_05.jpg', ]
+
+random_onload= Math.floor(math.random()* 9+1);
+
+if (random_onload==1) {
+  image="https://cbsminnesota.files.wordpress.com/2013/07/b_atlanta_05.jpg";
+}
+if (random_onload==2) {
+  image="http://sight123.com/uploads/allimg/150624/1-150624131553411.jpg";
+}
+if (random_onload==3) {
+  image="http://c2.staticflickr.com/4/3787/13710678543_6730b945d4_k.jpg";
+}
+if (random_onload==4) {
+  image="http://www.15rounds.com/wp-content/uploads/2013/11/Pacquiao_Rios_131124_003a.jpg"
+}
+if (random_onload==5) {
+  image="http://blog.forbestravelguide.com/wp-content/uploads/2012/02/2.La-Jolla-Shores-Beach5.jpg";
+}
+
+
+// to make buttons link to pages
+//    <center><form action="addphoto.html" method="get">
+//      <input type="submit" value="Add a Photo"
+//        name="Submit" id="addPhoto" /></center>
+
+// prompts user to enter image url
+<script>
+      function myFunction() {
+        var image = prompt ("Enter the URL of your picture!");
+        if (image != null) {
+          document.getElementById("demo").innerHTML = "Nice picture!"
+        }
+        
+        
+      }
+    </script>
+    
+    
+        <center><button onclick="myFunction ()">Add a Photo</button></center>
+    <script>
+      function myFunction() {
+        var image = prompt ("Enter the URL of your picture!");
+        if (image != null) {
+          document.getElementById("demo").innerHTML = "Nice picture!"
+        }
+        
+        
+      }
