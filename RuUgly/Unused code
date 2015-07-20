@@ -1,0 +1,7 @@
+<center><input type="file" accept="image/*;capture=camera"></center>
+    <center><button onclick="myFunction ()">Finish</button></center>
+    
+    
+    
+    
+    
