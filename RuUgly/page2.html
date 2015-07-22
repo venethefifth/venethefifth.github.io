@@ -4,6 +4,7 @@
   <title>Are You Ugly?</title>
   <link href="styles.css" rel="stylesheet">
   <script src="javascript.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
   <style>
     body {
@@ -24,6 +25,26 @@
   
   <img id="rateImg">
   
+  <div class="messenger container">
+    <header>Messenger</header>
+    
+    <div class='messenger-toolbar'>
+      <label for="usernameInput">Username:</label>
+      <input type='text' id='usernameInput' placeholder='Enter a username...'>
+      
+    </div>
+    
+    <ul id='messageList' class="messenger-messages"></ul>
+    
+    <footer>
+      <input type='text' id='messageInput' placeholder='Type a message...'>
+    </footer>
+    
+    <button id="submitButton">Send</button>
+  </div>
+  
+  <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+  <script src="javascript.js"></script>
   
   
   </body>

@@ -34,35 +34,31 @@ window.onload = function() {
     var rateImg = document.getElementById('rateImg');
     document.getElementById("rateImg").src = rateSrc;
     //image.style.width = '500px'
-  }
+    }
   
-  if (rand_no == 2) {
+    if (rand_no == 2) {
     var rateSrc = "http://img3.wikia.nocookie.net/__cb20120716012806/disney/images/e/e1/Yzma_42.PNG";
     var rateImg = document.getElementById('rateImg');
     document.getElementById("rateImg").src = rateSrc;
-    
-  }
+    }
   
-  if (rand_no == 3) {
+    if (rand_no == 3) {
     var rateSrc = "http://img4.wikia.nocookie.net/__cb20140821045938/disney/images/1/16/1561_Ursula_40_detail.jpg";
     var rateImg = document.getElementById('rateImg');
     document.getElementById("rateImg").src = rateSrc;
-    
-  }
+    }
   
-  if (rand_no == 4) {
+    if (rand_no == 4) {
     var rateSrc = "http://img1.wikia.nocookie.net/__cb20131015002405/disney/images/4/4b/Dalmatians-2-disneyscreencaps.com-4658.jpg.jpg";
     var rateImg = document.getElementById('rateImg');
     document.getElementById("rateImg").src = rateSrc;
-    
-  }
+    }
   
-  if (rand_no == 5) {
+    if (rand_no == 5) {
     var rateSrc = "http://a.dilcdn.com/bl/wp-content/uploads/sites/2/2013/09/Etiquette-Maleficent.jpg";
     var rateImg = document.getElementById('rateImg');
     document.getElementById("rateImg").src = rateSrc;
-  
-  }
+    }
   
   if (rand_no == 6) {
     var rateSrc = "http://img3.wikia.nocookie.net/__cb20131219204049/disney/images/0/0a/Snow_white_09.png";
@@ -105,15 +101,55 @@ window.onload = function() {
     //cat.setAttribute("src",QueryString.imageURL);
     
     //index.html
+    
+    
     var takePhoto = function() {
-      var photoUrl = prompt("give url") 
+  //    var photoUrl = prompt("give url")
 
-      var img = document.createElement("img");
-      img.src = photoUrl
+  //    var img = document.createElement("img");
+  //    img.src = photoUrl
+    
+    var photoUrl = document.getElementById("url")
 
       var parent = document.getElementById("gallery");
       parent.appendChild(img);
     }
+
+var messagesRef = new Firebase("https://camp-messenger.firebaseio.com/");
+
+var usernameInput = document.getElementById("usernameInput");
+var messageInput = document.getElementById("messageInput");
+var messageList = document.getElementById("messageList");
+
+var keyPressCallback = function (e) {
+  if (e.keyCode == 13) { // if user presses enter
+    var username = usernameInput.value;
+    if (username === "") {
+      username = "anonymous"
+    }
+    var message = messageInput.value;
+
+    var data = {};
+    data.name = username;
+    data.message = message;
+
+    messagesRef.push(data);
+    messageInput.value = "";
+  }
+};
+
+messageInput.onkeypress = keyPressCallback;
+
+var writeMessage = function(name, message) {
+  var messageElement = document.createElement("li");
+  messageElement.innerHTML = name + ": " + message;
+  messageList.appendChild(messageElement);
 }
 
+messagesRef.limitToLast(10).on('child_added', function (snapshot) {
+  var data = snapshot.val();
+  writeMessage(data.name, data.message);
+});
   
+};
+
