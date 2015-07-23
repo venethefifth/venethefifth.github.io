@@ -68,7 +68,7 @@ window.onload = function() {
   }
   
   if (rand_no == 7) {
-    var rateSrc = "http://cupegraf.com/data_images/wallpapers/52/471011-rapunzel.jpg";
+    var rateSrc = "http://img4.wikia.nocookie.net/__cb20140329031945/shake-it-up-fanon/images/4/48/New-Cinderella_disney-mzdarkstar-blog-2.jpg";
     var rateImg = document.getElementById('rateImg');
     document.getElementById("rateImg").src = rateSrc;
     
