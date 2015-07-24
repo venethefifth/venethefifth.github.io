@@ -1,0 +1,19 @@
+h1, h3 {
+  font-family: Helvetica;
+}
+
+#left {
+    width: 48%;
+    float: left;
+    padding:10px;
+    text-align: center;
+    margin: auto;
+}
+
+#right {
+  width: 48%;
+  float: right;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+}

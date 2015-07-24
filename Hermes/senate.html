@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="senate.js"></script>
   <style>
     ul {
       list-style-type: none;
-      margin: 0;
-      padding: 0;
+      margin: 10;
+      padding: 10;
       overflow: hidden;
     }
   li {
@@ -41,6 +43,23 @@
     <li><a href="bills.html">Bills</a></li>
     <li><a href="polls.html">Polls</a></li>
   </center></ul>
-+
+  
+
+  <center>
+  <select id="states" onChange="window.location.href=this.value">
+  <option>Pick a State</option>
+  <option value="alabama.html">Alabama</option>
+  <option value="Alaska.html">Alaska</option>
+  <option value="Arizona.html">Arizona</option>
+  <option value="arkansas.html">Arkansas</option>
+  <option value="california.html">California</option>
+  <option value="colorado">Colorado</option>
+  <option value="connecticut">Connecticut</option>
+  <option value="delaware">Delaware</option>
+  <option value="florida">Florida</option>
+  <option value="georgia">Georgia</option>
+  </center>
+  
+  </select>
 </body>
 </html>
